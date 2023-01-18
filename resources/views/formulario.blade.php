@@ -24,97 +24,43 @@
           <div class="inputBox">
             <input
               type="text"
-              name="nome"
-              id="nome"
+              name="title"
+              id="title"
               class="inputUser"
               required
             />
-            <label for="nome" class="labelInput">Nome completo</label>
+            <label for="titulo" class="labelInput">Titulo</label>
           </div>
           <br /><br />
           <div class="inputBox">
             <input
               type="text"
-              name="email"
-              id="email"
+              name="author"
+              id="author"
               class="inputUser"
               required
             />
-            <label for="email" class="labelInput">Email</label>
+            <label for="autor" class="labelInput">Autor</label>
           </div>
           <br /><br />
           <div class="inputBox">
             <input
-              type="tel"
-              name="telefone"
-              id="telefone"
+              type="text"
+              name="name"
+              id="name"
               class="inputUser"
               required
             />
-            <label for="telefone" class="labelInput">Telefone</label>
+            <label for="nome" class="labelInput">Nome</label>
           </div>
-          <p>Sexo:</p>
-          <input
-            type="radio"
-            id="genero"
-            name="genero"
-            value="masculino"
-            required
-          />
-          <label for="masculino">Masculino</label>
-          <br />
-          <input type="radio" id="genero" name="genero" value="outro" required />
-          <label for="feminino">Feminino</label>
-          <br />
-          <input
-            type="radio"
-            id="genero"
-            name="genero"
-            value="feminino"
-            required
-          />
-          <label for="outro">Outro</label>
           <br /><br />
-          <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+          <label for="data_nascimento"><b>Data de Entrada:</b></label>
           <input
             type="date"
-            name="data_nascimento"
-            id="data_nascimento"
+            name="date"
+            id="date"
             required
           />
-          <br /><br /><br />
-          <div class="inputBox">
-            <input
-              type="text"
-              name="cidade"
-              id="cidade"
-              class="inputUser"
-              required
-            />
-            <label for="cidade" class="labelInput">Cidade</label>
-          </div>
-          <br /><br />
-          <div class="inputBox">
-            <input
-              type="text"
-              name="estado"
-              id="estado"
-              class="inputUser"
-              required
-            />
-            <label for="estado" class="labelInput">Estado</label>
-          </div>
-          <br /><br />
-          <div class="inputBox">
-            <input
-              type="text"
-              name="endereco"
-              id="endereco"
-              class="inputUser"
-              required
-            />
-            <label for="endereco" class="labelInput">Endereço</label>
-          </div>
          
           <br /><br />
 

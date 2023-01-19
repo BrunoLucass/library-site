@@ -21,7 +21,7 @@
         <form action="" id="formulario">
             <fieldset>
 
-                @foreach ($product as $products)
+                @foreach ($products as $products)
                     <p>Titulo: {{ $products->title }}</p>
                     <p>Autor: {{ $products->author }}</p>
                     <p>nome: {{ $products->name }}</p>

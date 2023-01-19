@@ -13,6 +13,8 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    
+
 </head>
 
 <body>
@@ -20,26 +22,28 @@
     {{-- formulario  --}}
 
     <div class="box">
-        <form action="POST" id="formulario">
+        <form action="/products" method="POST" id="formulario">
+            @csrf
             <fieldset>
                 <legend><b>Fórmulário</b></legend>
                 <br />
+                
                 <div class="inputBox">
                     <input type="text" name="title" id="title" class="inputUser" required />
-                    <label for="titulo" class="labelInput">Titulo</label>
+                    <label for="title" class="labelInput">Titulo</label>
                 </div>
                 <br /><br />
                 <div class="inputBox">
                     <input type="text" name="author" id="author" class="inputUser" required />
-                    <label for="autor" class="labelInput">Autor</label>
+                    <label for="author" class="labelInput">Autor</label>
                 </div>
                 <br /><br />
                 <div class="inputBox">
                     <input type="text" name="name" id="name" class="inputUser" required />
-                    <label for="nome" class="labelInput">Nome</label>
+                    <label for="name" class="labelInput">Nome</label>
                 </div>
                 <br /><br />
-                <label for="data_nascimento"><b>Data de Entrada:</b></label>
+                <label for="date"><b>Data de Entrada:</b></label>
                 <input type="date" name="date" id="date" required />
 
 
@@ -49,7 +53,7 @@
 
                 <a href="{{ route('welcome') }}">
 
-                    <button type="button" name="submit" id="submit" onClick="">Enviar</button>
+                    <button type="submit" name="submit" id="submit" >Enviar</button>
 
                 </a>
 

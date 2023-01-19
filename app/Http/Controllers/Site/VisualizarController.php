@@ -13,4 +13,9 @@ class VisualizarController extends Controller
         return view('visualizar');
     }
 
+    public function show($id)
+    {
+        //
+    }
+
 }

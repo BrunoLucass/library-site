@@ -21,18 +21,14 @@
         <form action="" id="formulario">
             <fieldset>
 
-                {{-- @foreach ($data_form as $data_form)
-    <p>Nome: {{$data_form->name}}</p>
-    <p>Email: {{$data_form->email}}</p>
-    <p>Telefone: {{$data_form->telefone}}</p>
-    <p>Genero: {{$data_form->genero}}</p>
-    <p>Data de Nascimento: {{$data_form->data_nascimento}}</p>
-    <p>Cidade: {{$data_form->cidade}}</p>
-    <p>Estado: {{$data_form->estado}}</p>
-    <p>Endereço: {{$data_form->endereco}}</p>
-    @endforeach --}}
+                @foreach ($product as $products)
+                    <p>Titulo: {{ $products->title }}</p>
+                    <p>Autor: {{ $products->author }}</p>
+                    <p>nome: {{ $products->name }}</p>
+                    <p>Data: {{ $products->date }}</p>
+                @endforeach
 
-                <a href="{{ route('formulario') }}">
+                <a href="{{ route('welcome') }}">
                     <button type="button" name="submit" id="submit" onClick="">Voltar</button>
                 </a>
 

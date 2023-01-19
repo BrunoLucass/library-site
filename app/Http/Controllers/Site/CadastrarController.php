@@ -28,6 +28,7 @@ class CadastrarController extends Controller
     public function store(Request $request)
     {
         $products = new Products;
+        $products->id = $request->id;
         $products->title = $request->title;
         $products->author = $request->author;
         $products->name = $request->name;
@@ -38,7 +39,8 @@ class CadastrarController extends Controller
   
     public function show($id)
     {
-        //
+        $products = Products::findOrFail($id);
+        return view('visualizar', ['products' => $products]);
     }
   
     public function edit($id)

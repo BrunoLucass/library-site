@@ -11,12 +11,13 @@ class VisualizarController extends Controller
     public function visualizar()
     {
         $products = Products::all();
-        return view('visualizar',['produtcs' => $products]);
+        return view('visualizar',['products' => $products]);
     }
 
     public function show($id)
     {
-        //
+        $products = Products::findOrFail($id);
+        return view('visualizar', ['products' => $products]);
     }
 
 }

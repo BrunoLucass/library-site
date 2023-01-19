@@ -1,27 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Formulário</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-       
-        
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <title>Formulário</title>
 
-    </head>
+    <!-- Fonts -->
+    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <body>
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+</head>
+
+<body>
     <div class="box">
-    <legend><b>Visualizar dados</b></legend>
-    <form action="" id="formulario">
-    <fieldset>
+        <legend><b>Visualizar dados</b></legend>
+        <form action="" id="formulario">
+            <fieldset>
 
-    {{-- @foreach($data_form as $data_form)
+                {{-- @foreach ($data_form as $data_form)
     <p>Nome: {{$data_form->name}}</p>
     <p>Email: {{$data_form->email}}</p>
     <p>Telefone: {{$data_form->telefone}}</p>
@@ -32,19 +32,19 @@
     <p>Endereço: {{$data_form->endereco}}</p>
     @endforeach --}}
 
-    <a href="{{route('formulario')}}">
-    <button type="button" name="submit" id="submit" onClick="" >Voltar</button>
-    </a>
+                <a href="{{ route('formulario') }}">
+                    <button type="button" name="submit" id="submit" onClick="">Voltar</button>
+                </a>
 
-</div>
-    
-</fieldset>
-</form>
-</div>
-       
+    </div>
+
     </fieldset>
     </form>
     </div>
-    </body>
-    <script>
-</html>
+
+    </fieldset>
+    </form>
+    </div>
+</body>
+<script>
+    < /html>

@@ -25,3 +25,12 @@ Route::delete('/formulario/{id}', [CadastrarController::class, 'destroy'])->name
 Route::get('/edit/{id}', [CadastrarController::class, 'edit'])->name('products.edit');
 Route::put('/update/{id}', [CadastrarController::class, 'update'])->name('products.update');
  
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

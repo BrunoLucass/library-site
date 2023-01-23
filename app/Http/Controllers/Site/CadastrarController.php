@@ -17,14 +17,14 @@ class CadastrarController extends Controller
     public function index()
     {
         $products = Products::orderBy('created_at', 'desc')->paginate(10);
-        return view('formulario',['products' => $products]);
+        return view('formulario', ['products' => $products]);
     }
-  
+
     public function create()
     {
         return view('formulario');
     }
-  
+
     public function store(Request $request)
     {
         $products = new Products;
@@ -36,35 +36,30 @@ class CadastrarController extends Controller
         $products->save();
         return redirect()->route('welcome')->with('message', 'Livro criado com successo!');
     }
-  
+
     public function show($id)
     {
         $products = Products::findOrFail($id);
         return view('visualizar', ['products' => $products]);
     }
-  
+
     public function edit($id)
     {
         $products = Products::findOrFail($id);
-        return view('products.edit',compact('product'));
+        return view('edit', ['products' => $products]);
     }
-  
-    public function update(ProductRequest $request, $id)
+
+    public function update(Request $request)
     {
-        $products = Products::findOrFail($id);
-        $products->title        = $request->title;
-        $products->author = $request->author;
-        $products->name    = $request->name;
-        $products->date       = $request->date;
-        $products->save();
-        return redirect()->route('products.index')->with('message', 'Livro criado com successo!');
+        Products::findOrFail($request->id)->update($request->all());
+        return redirect()->route('visualizar')->with('message', 'Livro editado com successo!');
     }
-  
+
     public function destroy($id)
     {
         $products = Products::findOrFail($id);
         $products->delete();
-        return redirect()->route('visualizar')->with('alert-success','Produto deletado!');
+        return redirect('/visualizar')->with('alert-success', 'Produto deletado!');
     }
 
 }

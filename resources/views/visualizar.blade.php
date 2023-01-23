@@ -33,7 +33,7 @@
                             | Nome: {{ $products->name }} | Data: {{ $products->date }}</td>
 
                         <td>
-                            <a class='btn btn-info edit-btn'href="#">
+                            <a class='btn btn-info edit-btn'href="/edit/{{ $products->id }}">
                                 <ion-icon name="create-outline"></ion-icon> Editar
                             </a>
                             <form action="/formulario/{{ $products->id }}" method="POST">

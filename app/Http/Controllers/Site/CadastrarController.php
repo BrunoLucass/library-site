@@ -64,7 +64,7 @@ class CadastrarController extends Controller
     {
         $products = Products::findOrFail($id);
         $products->delete();
-        return redirect()->route('products.index')->with('alert-success','Produto deletado!');
+        return redirect()->route('visualizar')->with('alert-success','Produto deletado!');
     }
 
 }

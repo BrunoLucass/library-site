@@ -21,6 +21,8 @@ Route::get('/welcome', [LibraryController::class, 'index'])->name('welcome');
 Route::get('/visualizar', [VisualizarController::class, 'visualizar'])->name('visualizar');
 Route::get('/formulario/create', [CadastrarController::class, 'create'])->name('formulario');
 Route::post('/products', [CadastrarController::class, 'store'])->name('products.store');
+//Route::get('/products/{id}', [CadastrarController::class, 'show'])->name('products.show');
+Route::delete('/formulario/{id}', [CadastrarController::class, 'destroy'])->name('products.destroy');
 
 
 

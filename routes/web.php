@@ -21,17 +21,7 @@ Route::get('/welcome', [LibraryController::class, 'index'])->name('welcome');
 Route::get('/visualizar', [VisualizarController::class, 'visualizar'])->name('visualizar');
 Route::get('/formulario/create', [CadastrarController::class, 'create'])->name('formulario');
 Route::post('/products', [CadastrarController::class, 'store'])->name('products.store');
-//Route::get('/products/{id}', [CadastrarController::class, 'show'])->name('products.show');
 Route::delete('/formulario/{id}', [CadastrarController::class, 'destroy'])->name('products.destroy');
-
-
-
-
-
-
-// Route::get('/formulario', [ProductsController::class, 'index'])->name('formulario');
-// Route::get('projetos/inserir', 'ProjetosController@getInserir');
-// Route::post('projetos/inserir', 'ProjetosController@postInserir');
-// Route::get('projetos/editar/{id}', 'ProjetosController@getEditar');
-// Route::post('projetos/editar/{id}', 'ProjetosController@postEditar');
-// Route::post('projetos/deletar/{id}', 'ProjetosController@postDeletar');
+Route::get('/edit/{id}', [CadastrarController::class, 'edit'])->name('products.edit');
+Route::put('/update/{id}', [CadastrarController::class, 'update'])->name('products.update');
+ 

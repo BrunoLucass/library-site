@@ -11,4 +11,9 @@ class Products extends Model
     protected $fillable = ['title','author','name','date'];
     protected $guarded = [];
     protected $table = 'products';
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

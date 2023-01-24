@@ -18,12 +18,12 @@ use App\Http\Controllers\Site\VisualizarController;
 */
 
 Route::get('/welcome', [LibraryController::class, 'index'])->name('welcome');
-Route::get('/visualizar', [VisualizarController::class, 'visualizar'])->name('visualizar');
-Route::get('/formulario/create', [CadastrarController::class, 'create'])->name('formulario');
-Route::post('/products', [CadastrarController::class, 'store'])->name('products.store');
-Route::delete('/formulario/{id}', [CadastrarController::class, 'destroy'])->name('products.destroy');
-Route::get('/edit/{id}', [CadastrarController::class, 'edit'])->name('products.edit');
-Route::put('/update/{id}', [CadastrarController::class, 'update'])->name('products.update');
+Route::get('/visualizar', [VisualizarController::class, 'visualizar'])->name('visualizar')->middleware('auth');
+Route::get('/formulario/create', [CadastrarController::class, 'create'])->name('formulario')->middleware('auth');
+Route::post('/products', [CadastrarController::class, 'store'])->name('products.store')->middleware('auth');
+Route::delete('/formulario/{id}', [CadastrarController::class, 'destroy'])->name('products.destroy')->middleware('auth');
+Route::get('/edit/{id}', [CadastrarController::class, 'edit'])->name('products.edit')->middleware('auth');
+Route::put('/update/{id}', [CadastrarController::class, 'update'])->name('products.update')->middleware('auth');
  
 Route::middleware([
     'auth:sanctum',

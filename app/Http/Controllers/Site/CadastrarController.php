@@ -33,6 +33,7 @@ class CadastrarController extends Controller
         $products->author = $request->author;
         $products->name = $request->name;
         $products->date = $request->date;
+        $products->user_id = auth()->user()->id;
         $products->save();
         return redirect()->route('welcome')->with('message', 'Livro criado com successo!');
     }
